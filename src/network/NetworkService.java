@@ -20,6 +20,10 @@ public class NetworkService {
     private NetworkService(){
         messageHandler = new MessageHandler();
     }
+    public void start(Integer serverPort){
+        this.serverPort = serverPort;
+        start();
+    }
     public void start(){
         connections = new ArrayList<ConnectionHandler>();
 

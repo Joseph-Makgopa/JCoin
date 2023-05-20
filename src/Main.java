@@ -12,7 +12,5 @@ public class Main {
         NetworkService.getInstance().start();
         Scanner scanner = new Scanner(System.in);
 
-        NetworkService.getInstance().broadcast(new MineTransactionMessage(new Transaction(),"Please Mine this transaction"));
-
     }
 }
