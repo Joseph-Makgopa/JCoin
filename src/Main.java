@@ -1,4 +1,6 @@
 import network.NetworkService;
+import network.message.MineTransactionMessage;
+import transaction.Transaction;
 
 import java.security.*;
 import java.util.ArrayList;
@@ -10,13 +12,7 @@ public class Main {
         NetworkService.getInstance().start();
         Scanner scanner = new Scanner(System.in);
 
-        String line = "";
-
-        while(!line.equals("exit")) {
-            line = scanner.nextLine();
-        }
-
-        NetworkService.getInstance().stop();
+        NetworkService.getInstance().broadcast(new MineTransactionMessage(new Transaction(),"Please Mine this transaction"));
 
     }
 }
